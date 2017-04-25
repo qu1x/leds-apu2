@@ -337,6 +337,20 @@ static int __init gpio_apu2_init (void)
 		goto exit;
 	}
 
+	pr_info ("%s: request GPIO LED driver module\n", DEVNAME);
+
+	if (request_module("leds-gpio")) {
+		err = -ENODEV;
+		goto exit;
+	}
+
+	pr_info ("%s: request Polled GPIO Buttons driver module\n", DEVNAME);
+
+	if (request_module("gpio-keys-polled")) {
+		err = -ENODEV;
+		goto exit;
+	}
+
 	pr_info ("%s: load APU2/LED GPIO driver module\n", DEVNAME);
 
 	err = platform_driver_register (&gpio_apu2_driver);
