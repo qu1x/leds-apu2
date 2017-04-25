@@ -8,6 +8,11 @@ Forked from [LEDE][] and distributed as standalone package.
 
 ## Installation
 
+ 0. Requred modules:
+
+      * leds-gpio
+      * gpio-keys-polled
+
  1. Install Linux headers:
 
     ```sh
@@ -41,3 +46,8 @@ Forked from [LEDE][] and distributed as standalone package.
             ```sh
             sudo dkms install leds-apu2/1.0.0
             ```
+
+## Big Thanks
+
+...to the module's Author Christian Lamparter for helping me to get it running
+with Debian Stretch.
