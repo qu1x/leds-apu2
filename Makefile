@@ -1,8 +1,8 @@
-ifndef KVER
-KVER := $(shell uname -r)
+ifndef KERNELRELEASE
+KERNELRELEASE := $(shell uname -r)
 endif
 ifndef KDIR
-KDIR := /lib/modules/$(KVER)/build
+KDIR := /lib/modules/$(KERNELRELEASE)/build
 endif
 
 ifndef MDIR
