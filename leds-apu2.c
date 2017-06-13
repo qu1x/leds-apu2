@@ -229,17 +229,17 @@ static struct platform_driver gpio_apu2_driver = {
 
 static struct gpio_led apu2_leds_gpio[] = {
         {
-                .name           = "apu2:1",
+                .name           = "apu2:green:led1",
                 .gpio           = 509,
                 .active_low     = 1,
         },
         {
-                .name           = "apu2:2",
+                .name           = "apu2:green:led2",
                 .gpio           = 510,
                 .active_low     = 1,
         },
         {
-                .name           = "apu2:3",
+                .name           = "apu2:green:led3",
                 .gpio           = 511,
                 .active_low     = 1,
         },
